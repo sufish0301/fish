@@ -160,6 +160,24 @@
         text-decoration: underline;
       }
 
+      a.btnstyle {
+        color: white;
+        background-color: #007bff;
+        font-size: 24px;
+        padding: 15px 20px;
+        border: 1px solid #007bff;
+        border-radius: 20px;
+        cursor: pointer;
+        text-decoration: none;
+        line-height: 3em;
+        display: inline-block;
+        margin: 10px 5px;
+      }
+
+      a.btnstyle:hover {
+        background-color: #00438a;
+      }
+
       .safety-banner {
         background: var(--brand-brown);
         color: #fff;
@@ -213,6 +231,7 @@
             <li class="nav-item"><a class="nav-link" href="#pizza">披薩</a></li>
             <li class="nav-item"><a class="nav-link" href="#drinks">酒水</a></li>
             <li class="nav-item"><a class="nav-link" href="#dessert">甜點</a></li>
+            
           </ul>
         </nav>
         <div class="px-2 py-1">
@@ -280,6 +299,9 @@
                   <h3 class="card-title h5">香煎牛排</h3>
                   <p class="card-text">搭配時蔬與紅酒醬汁，肉香飽滿。</p>
                   <span class="price">NT$ 520</span>
+                  <div class="mt-3">
+                    <a href="#" class="btnstyle">點我 愛妳喔</a>
+                  </div>
                 </div>
               </article>
             </div>
@@ -330,6 +352,7 @@
                   <h3 class="card-title h5">分享披薩</h3>
                   <p class="card-text">熱騰騰起司牽絲，適合朋友聚餐分享。</p>
                   <span class="price">NT$ 340</span>
+              
                 </div>
               </article>
             </div>
@@ -338,16 +361,20 @@
       </main>
 
       <footer class="footer">
+        
         <img class="footer-logo" src="images/logo.jpg" alt="義式餐飲股份有限公司 Logo">
         <p class="mb-3">義式餐飲股份有限公司</p>
         <div class="row justify-content-center gy-2 mb-3">
           <div class="col-sm-auto">連絡電話: <a href="tel:02-XXXX-XXXX">02-XXXX-XXXX</a></div>
           <div class="col-sm-auto">地址: 義式市番茄區酒館路</div>
+          <div class="col-sm-auto">
+            
+          </div>
         </div>
         <p class="small mb-0">
           <a href="#">隱私權政策</a>
           <span class="mx-2">|</span>
-          義式餐酒館版權所有
+          <a href="#">聯絡我們</a>
         </p>
       </footer>
 
@@ -355,5 +382,47 @@
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    </script>https://github.com/sufish0301/fish/tree/49236169a60b2ed3bfd479a2a31451f64b2883c3/.github</script>
+    </script>https://github.com/sufish0301/fish/tree/49236169a60b2ed3bfd479a2a31451f64b2883c3/css</script>
+    </script>https://sufish0301.github.io/fish/
+    <script>
+      // 按鈕購物車點擊事件監聽
+      var buttons = document.querySelectorAll(".btnstyle");
+      buttons.forEach(function(btn) {
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          gtag("event", "add_to_cart", {
+            currency: "新台幣",
+            value: 1200,
+            items: [
+              {
+                item_id: "SKU_12345",
+                item_name: "Stan and Friends Tee",
+                affiliation: "Google Merchandise Store",
+                coupon: "SUMMER_FUN",
+                discount: 2.22,
+                index: 0,
+                item_brand: "Google",
+                item_category: "Apparel",
+                item_category2: "Adult",
+                item_category3: "Shirts",
+                item_category4: "Crew",
+                item_category5: "Short sleeve",
+                item_list_id: "related_products",
+                item_list_name: "Related Products",
+                item_variant: "green",
+                location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+                price: 10.01,
+                google_business_vertical: "retail",
+                quantity: 3
+              }
+            ]
+          });
+
+          alert("您已將商品加入購物車");
+        }, false);
+      });
+    </script>
   </body>
 </html>
