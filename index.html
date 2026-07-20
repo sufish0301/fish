@@ -300,7 +300,7 @@
                   <p class="card-text">搭配時蔬與紅酒醬汁，肉香飽滿。</p>
                   <span class="price">NT$ 520</span>
                   <div class="mt-3">
-                    <a href="#" class="btnstyle">點我 愛妳喔</a>
+                    <a href="https://sufish0301.github.io/fish/" class="btnstyle" data-cart-url="https://sufish0301.github.io/fish/">點我 愛妳喔</a>
                   </div>
                 </div>
               </article>
@@ -389,9 +389,13 @@
         btn.addEventListener("click", function (e) {
           e.preventDefault();
 
+          var cartUrl = btn.getAttribute("data-cart-url") || "https://sufish0301.github.io/fish/";
+
           gtag("event", "add_to_cart", {
             currency: "新台幣",
             value: 1200,
+            page_title: "開胃菜餐酒館",
+            page_location: cartUrl,
             items: [
               {
                 item_id: "SKU_12345",
@@ -417,7 +421,9 @@
             ]
           });
 
-          alert("您已將商品加入購物車");
+          setTimeout(function () {
+            window.location.href = cartUrl;
+          }, 200);
         }, false);
       });
     </script>
